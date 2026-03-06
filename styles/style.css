@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Geist", sans-serif;
+}
+
+body {
+    width: 70%;
+    background: #F8FAFC;
+    margin: auto;
+}
+
+h1.job-tracker {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.total-interview-reject {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.total,
+.total-interview,
+.total-rejected {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+h4#total-count,
+#interview-count,
+#rejected-count {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+h2#int-count {
+    color: #10B981;
+}
+
+h2#rej-count {
+    color: #EF4444;
+}
+
+h2#tot-count,
+#int-count,
+#rej-count {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h2.avail.job {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h3#total-jobs {
+    font-size: 16px;
+    font-weight: 500;
+    color: #64748B;
+}
+
+section.available-jobs {
+    padding-bottom: 60px;
+}
+
+button.add-bg {
+    padding: 8px 12px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    background: white;
+    color: #64748B;
+    border: 1px solid #64748b2e;
+    cursor: pointer;
+}
+
+.jobs-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0px;
+}
+
+.all-interview-rejected {
+    margin-bottom: 16px;
+}
+
+div#border1,
+#border2,
+#border3,
+#border4,
+#border5,
+#border6,
+#border7,
+#border8 {
+    background: white;
+    padding: 24px;
+    margin-top: 16px;
+    border-radius: 8px;
+}
+
+p.job-title {
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.job-title\&delete-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span.job-subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    color: #64748B;
+}
+
+p.time-salary {
+    font-size: 14px;
+    font-weight: normal;
+    color: #64748B;
+    margin: 20px 0px;
+}
+
+#not-applied1,
+#not-applied2,
+#not-applied3,
+#not-applied4,
+#not-applied5,
+#not-applied6,
+#not-applied7,
+#not-applied8 {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 12px;
+    background: #EEF4FF;
+    border-radius: 4px;
+    border: none;
+}
+
+p.job-description {
+    line-height: 40px;
+    font-size: 14px;
+    color: #323B49;
+}
+
+button#interview,
+#rejected {
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background: white;
+    cursor: pointer;
+}
+
+button#interview {
+    border: 2px solid #008458;
+    margin-right: 10px;
+    color: #006c48;
+}
+
+button#rejected {
+    border: 2px solid #ff0000;
+    color: #ff0404;
+}
+
+.interview-rejected-btn {
+    margin-top: 20px;
+}
+
+div#no-jobs,
+#total-interview-post,
+#no-jobs-all {
+    background: white;
+    height: 400px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: -40px;
+}
+
+h3.jobs-avail {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+p.check-back {
+    font-size: 16px;
+    color: #64748B;
+}
+
+img {
+    margin-top: 120px;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-background,
+.add-all {
+    background-color: #3B82F6 !important;
+    color: white !important;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: 1px solid #64748b2e;
+}
+
+i#delete {
+    cursor: pointer;
+}
+
+button#interview:hover {
+    background-color: #00a53f5e;
+    color: #004523;
+    border: 2px solid #008b46;
+    transition: all ease-in 0.1s;
+}
+
+button#rejected:hover {
+    background: #ff000045;
+    color: #ff0000;
+    border: 2px solid #ff0404;
+    transition: all ease-in 0.1s;
+}
+
+.interview-class-add {
+    background-color: #00a53f5e !important;
+    color: #004523;
+    border: 2px solid #008b46 !important;
+}
+
+.border-green {
+    border-left: 10px solid #00ba00 !important;
+}
+
+.rejected-class-add {
+    background: #ff000045 !important;
+    color: #8c0000;
+    border: 2px solid #ff0000 !important;
+}
+
+.border-red {
+    border-left: 10px solid #ff0000 !important;
+}
+
+@media screen and (max-width: 576px) {
+    p.job-description {
+        line-height: 25px;
+    }
+
+    #not-applied {
+        margin-bottom: 10px;
+    }
+}

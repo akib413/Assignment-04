@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="job-tracker">Job Application Tracker</h1>
+        <div class="total-interview-reject">
+            <div class="total">
+                <h4 id="total-count">Total</h4>
+                <h2 id="tot-count">8</h2>
+            </div>
+            <div class="total-interview">
+                <h4 id="interview-count">Interview</h4>
+                <h2 id="int-count">0</h2>
+            </div>
+            <div class="total-rejected">
+                <h4 id="rejected-count">Rejected</h4>
+                <h2 id="rej-count">0</h2>
+            </div>
+        </div>
+    </header>
+
+    <section class="available-jobs">
+        <div class="jobs-heading">
+            <h2 class="avail-job">Available Jobs</h2>
+            <h3 id="total-jobs">8 jobs</h3>
+        </div>
+        <div class="all-interview-rejected">
+            <button onclick="switchTab('all-jobs', 'all-btn')" id="all-btn" class="add-bg add-all">All</button>
+            <button onclick="switchTab('interview-tab', 'interview-btn')" id="interview-btn"
+                class="add-bg">Interview</button>
+            <button onclick="switchTab('no-jobs-available', 'rejected-btn')" id="rejected-btn"
+                class="add-bg">Rejected</button>
+        </div>
+        <div id="all-jobs">
+            <div id="job1">
+                <div id="border1">
+                    <div class="job-title&delete-icon">
+                        <p class="job-title">Mobile First Corp <br> <span class="job-subtitle">React Native
+                                Developer</span>
+                        </p>
+                        <i onclick="removeJobPost('job1')" id="delete" class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="job-time-salary">
+                        <p class="time-salary">Remote
+                            •
+                            Full-time
+                            •
+                            $130,000 - $175,000</p>
+                    </div>
+                    <div class="is-applied">
+                        <button id="not-applied1" class="idIntRej">NOT APPLIED</button>
+                        <p class="job-description">Build cross-platform mobile applications using React Native. Work on
+                            products
+                            used by millions of users worldwide.</p>
+                    </div>
+                    <div class="interview-rejected-btn">
+                        <button onclick="selectInterview('not-applied1', 'job1', 'border1')"
+                            id="interview">INTERVIEW</button>
+                        <button onclick="selectRejected('not-applied1', 'job1', 'border1')"
+                            id="rejected">REJECTED</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="job2">
+                <div id="border2">
+                    <div class="job-title&delete-icon">
+                        <p class="job-title">WebFlow Agency <br> <span class="job-subtitle">Web Designer &
+                                Developer</span>
+                        </p>
+                        <i onclick="removeJobPost('job2')" id="delete" class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="job-time-salary">
+                        <p class="time-salary">Los Angeles, CA
+                            •
+                            Part-time
+                            •
+                            $80,000 - $120,000</p>
+                    </div>
+                    <div class="is-applied">
+                        <button id="not-applied2">NOT APPLIED</button>
+                        <p class="job-description">Create stunning web experiences for high-profile clients. Must have
+                            portfolio
+                            and experience with modern web design trends.</p>
+                    </div>
+                    <div class="interview-rejected-btn">
+                        <button onclick="selectInterview('not-applied2', 'job2', 'border2')"
+                            id="interview">INTERVIEW</button>
+                        <button onclick="selectRejected('not-applied2', 'job2', 'border2')"
+                            id="rejected">REJECTED</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="job3">
+                <div id="border3">
+                    <div class="job-title&delete-icon">
+                        <p class="job-title">DataViz Solutions <br> <span class="job-subtitle">Data Visualization
+                                Specialist</span></p>
+                        <i onclick="removeJobPost('job3')" id="delete" class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="job-time-salary">
+                        <p class="time-salary">Boston, MA
+                            •
+                            Full-time
+                            •
+                            $125,000 - $165,000</p>
+                    </div>
+                    <div class="is-applied">
+                        <button id="not-applied3">NOT APPLIED</button>
+                        <p class="job-description">Transform complex data into compelling visualizations. Required
+                            skills:
+                            D3.js, React, and strong analytical thinking.
+                        </p>
+                    </div>
+                    <div class="interview-rejected-btn">
+                        <button onclick="selectInterview('not-applied3', 'job3', 'border3')"
+                            id="interview">INTERVIEW</button>
+                        <button onclick="selectRejected('not-applied3', 'job3', 'border3')"
+                            id="rejected">REJECTED</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="job4">
+                <div id="border4">
+                    <div class="job-title&delete-icon">
+                        <p class="job-title">CloudFirst Inc <br> <span class="job-subtitle">Backend Developer</span></p>
+                        <i onclick="removeJobPost('job4')" id="delete" class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="job-time-salary">
+                        <p class="time-salary">Seattle, WA
+                            •
+                            Full-time
+                            •
+                            $140,000 - $190,000</p>
+                    </div>
+                    <div class="is-applied">
+                        <button id="not-applied4">NOT APPLIED</button>
+                        <p class="job-description">Design and maintain scalable backend systems using Python and AWS.
+                            Work
+                            with
+                            modern DevOps practices and cloud infrastructure.</p>
+                    </div>
+                    <div class="interview-rejected-btn">
+                        <button onclick="selectInterview('not-applied4', 'job4', 'border4')"
+                            id="interview">INTERVIEW</button>
+                        <button onclick="selectRejected('not-applied4', 'job4', 'border4')"
+                            id="rejected">REJECTED</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="job5">
+                <div id="border5">
+                    <div class="job-title&delete-icon">
+                        <p class="job-title">Innovation Labs <br> <span class="job-subtitle">UI/UX Engineer</span></p>
+                        <i onclick="removeJobPost('job5')" id="delete" class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="job-time-salary">
+                        <p class="time-salary">Austin, TX
+                            •
+                            Full-time
+                            •
+                            $110,000 - $150,000</p>
+                    </div>
+                    <div class="is-applied">
+                        <button id="not-applied5">NOT APPLIED</button>
+                        <p class="job-description">Create beautiful and functional user interfaces for our suite of
+                            products.
+                            Strong design skills and frontend development expertise required.</p>
+                    </div>
+                    <div class="interview-rejected-btn">
+                        <button onclick="selectInterview('not-applied5', 'job5', 'border5')"
+                            id="interview">INTERVIEW</button>
+                        <button onclick="selectRejected('not-applied5', 'job5', 'border5')"
+                            id="rejected">REJECTED</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="job6">
+                <div id="border6">
+                    <div class="job-title&delete-icon">
+                        <p class="job-title">MegaCorp Solutions <br> <span class="job-subtitle">JavaScript
+                                Developer</span>
+                        </p>
+                        <i onclick="removeJobPost('job6')" id="delete" class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="job-time-salary">
+                        <p class="time-salary">New York, NY
+                            •
+                            Full-time
+                            •
+                            $130,000 - $170,00</p>
+                    </div>
+                    <div class="is-applied">
+                        <button id="not-applied6">NOT APPLIED</button>
+                        <p class="job-description">Build enterprise applications with JavaScript and modern frameworks.
+                            We
+                            offer
+                            competitive compensation, health insurance, and professional development opportunities.</p>
+                    </div>
+                    <div class="interview-rejected-btn">
+                        <button onclick="selectInterview('not-applied6', 'job6', 'border6')"
+                            id="interview">INTERVIEW</button>
+                        <button onclick="selectRejected('not-applied6', 'job6', 'border6')"
+                            id="rejected">REJECTED</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="job7">
+                <div id="border7">
+                    <div class="job-title&delete-icon">
+                        <p class="job-title">StartupXYZ <br> <span class="job-subtitle">Full Stack Engineer</span></p>
+                        <i onclick="removeJobPost('job7')" id="delete" class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="job-time-salary">
+                        <p class="time-salary">Remote
+                            •
+                            Full-time
+                            •
+                            $120,000 - $160,000</p>
+                    </div>
+                    <div class="is-applied">
+                        <button id="not-applied7">NOT APPLIED</button>
+                        <p class="job-description">Join our fast-growing startup and work on our core platform.
+                            Experience
+                            with
+                            Node.js and React required. Great benefits and equity package included.</p>
+                    </div>
+                    <div class="interview-rejected-btn">
+                        <button onclick="selectInterview('not-applied7', 'job7', 'border7')"
+                            id="interview">INTERVIEW</button>
+                        <button onclick="selectRejected('not-applied7', 'job7', 'border7')"
+                            id="rejected">REJECTED</button>
+                    </div>
+                </div>
+
+            </div>
+            <div id="job8">
+                <div id="border8">
+                    <div class="job-title&delete-icon">
+                        <p class="job-title">TechCorp Industries <br> <span class="job-subtitle">Senior Frontend
+                                Developer</span></p>
+                        <i onclick="removeJobPost('job8')" id="delete" class="fa-regular fa-trash-can"></i>
+                    </div>
+                    <div class="job-time-salary">
+                        <p class="time-salary">San Francisco, CA
+                            •
+                            Full-time
+                            •
+                            $130,000 - $175,000</p>
+                    </div>
+                    <div class="is-applied">
+                        <button id="not-applied8">NOT APPLIED</button>
+                        <p class="job-description">We are looking for an experienced Frontend Developer to build
+                            scalable
+                            web
+                            applications using React and TypeScript. You will work with a talented team on cutting-edge
+                            projects.</p>
+                    </div>
+                    <div class="interview-rejected-btn">
+                        <button onclick="selectInterview('not-applied8', 'job8', 'border8')"
+                            id="interview">INTERVIEW</button>
+                        <button onclick="selectRejected('not-applied8', 'job8', 'border8')"
+                            id="rejected">REJECTED</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="no-jobs-all" class="hidden">
+            <img src="images/jobs.png" alt="">
+            <h3 class="jobs-avail">No jobs available</h3>
+            <p class="check-back">Check back soon for new job opportunities</p>
+        </div>
+    </section>
+
+    <section id="interview-tab" class="hidden">
+        <div id="total-interview-post">
+            <img src="images/jobs.png" alt="">
+            <h3 class="jobs-avail">No jobs available</h3>
+            <p class="check-back">Check back soon for new job opportunities</p>
+        </div>
+        <div id="interview-tab">
+
+        </div>
+    </section>
+
+    <section id="no-jobs-available" class="hidden">
+        <div id="no-jobs">
+            <img src="images/jobs.png" alt="">
+            <h3 class="jobs-avail">No jobs available</h3>
+            <p class="check-back">Check back soon for new job opportunities</p>
+        </div>
+        <div id="rejected-tab">
+
+        </div>
+    </section>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
